@@ -30,6 +30,7 @@ public class ChangeCalculator {
 		
 		int price, received, change;
 		int pay50, pay20, pay10, pay5, pay2, pay1;
+		System.out.println("Test");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter the price");
@@ -37,25 +38,30 @@ public class ChangeCalculator {
 		System.out.println("Please enter amount received");
 		received = sc.nextInt();
 		
-		change = received % price;
+		change = received - price;
 		String res = "Change: ";
 		System.out.println(res + change);
 		
 		pay50 = change / 50;
 		System.out.println("50EUR notes: " + pay50);
 		change = change - 50 * pay50;
+		
 		pay20 = change / 20;
 		System.out.println("20EUR notes: " + pay20);
 		change = change - 20 * pay20;
+		
 		pay10 = change / 10;
 		System.out.println("10EUR notes: " + pay10);
 		change = change - 10 * pay10;
+		
 		pay5 = change / 5;
 		System.out.println("5EUR notes: " + pay5);
 		change = change - 5 * pay5;
+		
 		pay2 = change / 2;
 		System.out.println("2EUR notes: " + pay2);
 		change = change - 2 * pay2;
+		
 		pay1 = change / 1;
 		System.out.println("1EUR notes: " + pay1);
 		change = change - 1 * pay1;
